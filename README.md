@@ -1,12 +1,40 @@
-# CI/CD for Machine Learning (GitOps)
+# W&B CI/CD Assignment
 
-This repo contains code accompanying W&B CI/CD for Machine Learning (GitOps) course. You can sign up for free [here](https://www.wandb.courses/courses/ci-cd-for-machine-learning). 
+This repository contains my implementation of the Weights & Biases CI/CD assignment.
 
-## What you'll learn in the course
+## Project Structure
 
-- Automate ML pipelines with GitHub Actions
-- Automate testing for your ML code
-- Implement branch protection rules
-- Integrate Github API in your actions
-- Integrate W&B API and programmatic reports into ML workflows
-- Promote models to the registry with W&BTesting workflow
+```
+.
+├── .github/
+│   └── workflows/
+│       └── exercise-wandb.yaml
+├── client/
+│   └── compare_runs.py
+├── requirements.txt
+└── README.md
+```
+
+## Features
+
+- GitHub Actions workflow triggered by PR comments
+- W&B API integration
+- Automatic baseline run comparison
+- Programmatic W&B report generation
+
+## Usage
+
+1. Create a pull request.
+2. Comment:
+
+```text
+/wandb <run_id>
+```
+
+3. GitHub Actions generates a comparison report between the specified run and the baseline run.
+
+## Technologies
+
+- Python
+- GitHub Actions
+- Weights & Biases (W&B)
